@@ -1,0 +1,75 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar-container {
+  width: 25%;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.main-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.tree-node-header {
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.tree-node-children {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.item-details img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.auth-page button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.app {
+  display: flex;
+  height: 100vh; 
+}
+
+.sidebar-container {
+  width: 25%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow-y: auto; 
+  max-height: 100vh; 
+}
+
+.main-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.item-details img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
