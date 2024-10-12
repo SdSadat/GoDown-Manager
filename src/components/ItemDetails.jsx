@@ -9,19 +9,40 @@ const ItemDetails = ({ item }) => {
     <div className="item-details">
       <h2>{item.name}</h2>
       <img src={item.image_url} alt={item.name} />
-      <p>Category: {item.category}</p>
-      <p>Quantity: {item.quantity}</p>
-      <p>Price: ${item.price}</p>
-      <p>Status: {item.status}</p>
-      <p>Brand: {item.brand}</p>
-      {item.attributes &&
-        Object.keys(item.attributes).map((key) => (
-          <p key={key}>
-            {key}: {item.attributes[key]}
-          </p>
-        ))}
+      
+      <table className="item-table">
+        <tbody>
+          <tr>
+            <td><strong>Category:</strong></td>
+            <td>{item.category}</td>
+          </tr>
+          <tr>
+            <td><strong>Quantity:</strong></td>
+            <td>{item.quantity}</td>
+          </tr>
+          <tr>
+            <td><strong>Price:</strong></td>
+            <td>${item.price}</td>
+          </tr>
+          <tr>
+            <td><strong>Status:</strong></td>
+            <td>{item.status}</td>
+          </tr>
+          <tr>
+            <td><strong>Brand:</strong></td>
+            <td>{item.brand}</td>
+          </tr>
+          {item.attributes && Object.keys(item.attributes).map((key) => (
+            <tr key={key}>
+              <td><strong>{key}:</strong></td>
+              <td>{item.attributes[key]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
+  
 };
 
 export default ItemDetails;
