@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getGodowns, getChildGoDowns } from '../api';
+import { getGodowns } from '../api';
 import TreeNode from './TreeNode';
 
 const Sidebar = ({ setSelectedItem }) => {
@@ -10,26 +10,26 @@ const Sidebar = ({ setSelectedItem }) => {
       const response = await getGodowns();
       const godownList = response.data;
 
-      const godownMap = {};
-        godownList.forEach((godown) => {
-            godown.children = [];
-            godownMap[godown.id] = godown;
-        });
+      const mapGodown = {};
+      godownList.forEach((godown) => {
+        godown.children = []; 
+        mapGodown[godown.id] = godown;
+      });
 
-        const rootGodowns = [];
-        godownList.forEach((godown) => {
-            if (godown.parent_id) {
-                godownMap[godown.parent_id].children.push(godown);
-            } else {
-                rootGodowns.push(godown);
-            }
-        });
+      const rootGodowns = [];
+      godownList.forEach((godown) => {
+        if (godown.parent_godown) {
+          mapGodown[godown.parent_godown].children.push(godown);
+        } else {
+          rootGodowns.push(godown);
+        }
+      });
 
-        setGodowns(rootGodowns);
+      setGodowns(rootGodowns);
     };
+
     fetchGodowns();
   }, []);
-
 
   return (
     <div className="sidebar">

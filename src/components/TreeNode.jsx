@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { getItemsByGodown } from '../api';
+import React, { useState } from "react";
+import { getItemsByGodown } from "../api";
 
 const TreeNode = ({ node, setSelectedItem }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,13 +16,25 @@ const TreeNode = ({ node, setSelectedItem }) => {
   return (
     <div className="tree-node">
       <div onClick={toggleOpen} className="tree-node-header">
-        {node.name} {isOpen ? '[-]' : '[+]'}
+        {node.name} {isOpen ? "[-]" : "[+]"}
       </div>
-      {isOpen && (
+      {isOpen && ( // assuming items present only in leaf childrens
         <div className="tree-node-children">
-          {items.length > 0 ? (
+          {node.children.length > 0 ? (
+            node.children.map((childNode) => (
+              <TreeNode
+                key={childNode.id}
+                node={childNode}
+                setSelectedItem={setSelectedItem}
+              />
+            ))
+          ) : items.length > 0 ? (
             items.map((item) => (
-              <div key={item.item_id} onClick={() => setSelectedItem(item)}>
+              <div
+                key={item.item_id}
+                onClick={() => setSelectedItem(item)}
+                className="tree-item"
+              >
                 {item.name}
               </div>
             ))

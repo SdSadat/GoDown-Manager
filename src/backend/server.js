@@ -35,6 +35,7 @@ app.get('/items/:godownId', (req, res) => {
       godownItems.push(item);
     }
   });
+  console.log(godownItems.length)
   res.status(200).send(godownItems);
 });
 

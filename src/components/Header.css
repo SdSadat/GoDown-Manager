@@ -1,0 +1,43 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #8b8b8b;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-info {
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  
+
+  .logout-button {
+    padding: 8px 15px;
+    background-color: white;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
