@@ -1,0 +1,85 @@
+.item-details-portrait {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    max-height: 100vh;
+    overflow: hidden; 
+    margin: 20px auto;
+  }
+  
+  .item-image-wrapper {
+    width: 100%;
+    height: 35vh;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid black;
+  }
+  
+  .item-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .item-info {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; 
+    overflow-y: auto; 
+    border: 1px solid black;
+  }
+  
+  .item-info h2 {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .item-content {
+    max-height: 50vh;
+    overflow-y: auto; 
+  }
+  
+  .item-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .item-table td {
+    padding: 8px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .item-table td:first-child {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .status-label {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  
+  .status-label.in_stock {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .status-label.out_of_stock {
+    background-color: #f44336;
+    color: white;
+  }
+  

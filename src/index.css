@@ -27,52 +27,6 @@ body {
   color: #333;
 }
 
-
-.item-details {
-  background-color: #e5e2e2;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(2, 2, 2, 0.1); 
-  padding: 20px; 
-  max-width: 400px; 
-  display: flex;
-  flex-direction: column;
-  margin: 10px auto;
-  border: 2px solid #252525;
-}
-
-.item-details h2 {
-  font-size: 32px;
-  /* margin-bottom: 10px; */
-  color: #333;
-  text-align: center;
-}
-
-.item-details img {
-  width: 80%;
-  height: auto;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-}
-
-.item-details p {
-  margin: 8px 0;
-  font: 24px solid black;
-  font-weight: bold;
-}
-
-.item-details p span {
-  font-weight: bold;
-  color: #333;
-}
-
-.item-details .category, .status, .brand {
-  font-weight: bold;
-}
-
 .tree-node {
   margin-left: 20px;
   cursor: pointer;

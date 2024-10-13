@@ -1,4 +1,5 @@
 import React from 'react';
+import './ItemDetails.css';
 
 const ItemDetails = ({ item }) => {
   if (!item) {
@@ -6,40 +7,50 @@ const ItemDetails = ({ item }) => {
   }
 
   return (
-    <div className="item-details">
-      <h2>{item.name}</h2>
-      <img src={item.image_url} alt={item.name} />
+    <div className="item-details-card">
+      <div className="item-header">
+        <h2>{item.name}</h2>
+        <div className="item-image-wrapper">
+          <img src={item.image_url} alt={item.name} />
+        </div>
+      </div>
       
-      <table className="item-table">
-        <tbody>
-          <tr>
-            <td><strong>Category:</strong></td>
-            <td>{item.category}</td>
-          </tr>
-          <tr>
-            <td><strong>Quantity:</strong></td>
-            <td>{item.quantity}</td>
-          </tr>
-          <tr>
-            <td><strong>Price:</strong></td>
-            <td>${item.price}</td>
-          </tr>
-          <tr>
-            <td><strong>Status:</strong></td>
-            <td>{item.status}</td>
-          </tr>
-          <tr>
-            <td><strong>Brand:</strong></td>
-            <td>{item.brand}</td>
-          </tr>
-          {item.attributes && Object.keys(item.attributes).map((key) => (
-            <tr key={key}>
-              <td><strong>{key}:</strong></td>
-              <td>{item.attributes[key]}</td>
+      <div className="item-info">
+        <table className="item-table">
+          <tbody>
+            <tr>
+              <td>Category:</td>
+              <td>{item.category}</td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+            <tr>
+              <td>Quantity:</td>
+              <td>{item.quantity}</td>
+            </tr>
+            <tr>
+              <td>Price:</td>
+              <td>${item.price}</td>
+            </tr>
+            <tr>
+              <td>Status:</td>
+              <td>
+                <span className={`status-label ${item.status.toLowerCase()}`}>
+                  {item.status}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Brand:</td>
+              <td>{item.brand}</td>
+            </tr>
+            {item.attributes && Object.keys(item.attributes).map((key) => (
+              <tr key={key}>
+                <td>{key}:</td>
+                <td>{item.attributes[key]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
   
