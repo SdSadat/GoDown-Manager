@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
- font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .app {
@@ -12,17 +18,17 @@ body {
   padding: 20px;
 }
 
-
 .sidebar-container {
   width: 30%;
   background-color: #fdf8f8;
   padding: 20px;
-  overflow-y: auto; 
-  max-height: 100vh; 
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
-.sidebar h3{
+.sidebar h3 {
   font-size: 24px;
+  margin-top: 10px;
   margin-bottom: 10px;
   color: #333;
 }
@@ -52,6 +58,6 @@ body {
   background-color: #f0f0f0;
 }
 
-.tree-item:hover{
+.tree-item:hover {
   text-decoration: underline;
 }
