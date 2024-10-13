@@ -7,7 +7,9 @@
 - **User Authentication**: Secure login/logout functionality using JWT (JSON Web Tokens).
 
 ## Deployment
-Link: http://godown.work.gd/
+Deployed on: Azure VM  
+Domain Service: [freedomain.one](https://freedomain.one/)  
+Link: http://godown.work.gd/  
 Demo: [G-Drive](https://drive.google.com/drive/folders/1OD8vmTXsceMnXKPyhJzKyxj1mPblwt-3?usp=sharing)
 
 ## Technologies Used
