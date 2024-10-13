@@ -16,6 +16,11 @@ const TreeNode = ({ node, setSelectedItem }) => {
   return (
     <div className="tree-node">
       <div onClick={toggleOpen} className="tree-node-header">
+        <i
+          className={`fa ${isOpen ? "fa-folder-open" : "fa-folder"}`}
+          aria-hidden="true"
+          style={{ marginRight: "4px" }}
+        ></i>
         {node.name} {isOpen ? "[-]" : "[+]"}
       </div>
       {isOpen && ( // assuming items present only in leaf childrens
@@ -35,6 +40,7 @@ const TreeNode = ({ node, setSelectedItem }) => {
                 onClick={() => setSelectedItem(item)}
                 className="tree-item"
               >
+                <i className="fa-duotone fa-solid fa-circle"></i>
                 {item.name}
               </div>
             ))

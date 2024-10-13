@@ -14,12 +14,19 @@ body {
 
 
 .sidebar-container {
-  width: 25%;
-  background-color: #f5f5f5;
+  width: 30%;
+  background-color: #fdf8f8;
   padding: 20px;
   overflow-y: auto; 
   max-height: 100vh; 
 }
+
+.sidebar h3{
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
 
 .item-details {
   background-color: #e5e2e2;
@@ -27,22 +34,27 @@ body {
   box-shadow: 0 4px 8px rgba(2, 2, 2, 0.1); 
   padding: 20px; 
   max-width: 400px; 
-  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
   border: 2px solid #252525;
 }
 
 .item-details h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  /* margin-bottom: 10px; */
   color: #333;
   text-align: center;
 }
 
 .item-details img {
-  width: 100%;
+  width: 80%;
   height: auto;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 8px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 15px;
 }
 
@@ -82,6 +94,10 @@ body {
   padding: 5px 0;
   cursor: pointer;
 }
+.tree-node-children div:hover {
+  background-color: #f0f0f0;
+}
+
 .tree-item:hover{
   text-decoration: underline;
 }
